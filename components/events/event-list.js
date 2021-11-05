@@ -1,12 +1,11 @@
-import EventItem from './event-item';
-import classes from './event-list.module.css';
+import EventItem from './event-item'
+import classes from './event-list.module.css'
 
-function EventList(props) {
-  const { items } = props;
-
+function EventList({ events }) {
+  console.log(events)
   return (
     <ul className={classes.list}>
-      {items.map((event) => (
+      {events.map((event) => (
         <EventItem
           key={event.id}
           id={event.id}
@@ -17,7 +16,7 @@ function EventList(props) {
         />
       ))}
     </ul>
-  );
+  )
 }
 
-export default EventList;
+export default EventList
